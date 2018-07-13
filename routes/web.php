@@ -1,5 +1,5 @@
 <?php
-
+use App\Car;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +16,8 @@ Route::get('/', function () {
     $age  = 23;
     return view('welcome',compact('name','age'));
 });
+
+Route::get('/cars', 'CarsController@index');
 
 Route::get('/about', function () {
     return view('about');

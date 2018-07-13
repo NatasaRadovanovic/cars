@@ -17,7 +17,7 @@ class CreateCarsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('producer');
-            $table->intiger('number_of_doors');
+            $table->integer('number_of_doors');
         });
     }
 
