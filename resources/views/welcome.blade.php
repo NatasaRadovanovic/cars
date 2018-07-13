@@ -10,6 +10,7 @@
 
     <body>
 
-        <h2>Welcome to Cars Project!</h2>    
+        <h2>Welcome {{$name}}!</h2>   
+        <p>I'm {{$age}} years old.</p> 
     </body>
 </html>
