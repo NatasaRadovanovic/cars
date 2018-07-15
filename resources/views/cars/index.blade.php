@@ -7,13 +7,20 @@
     <title>Cars</title>
 </head>
 <body>
-
-   
-   @foreach($cars as $car)
-        
-    <div>{{$car->title}}</div>
-    <div>{{$car->producer}}</div>
-    <div>{{$car->number_of_doors}}</div>
+    
+    @foreach($cars as $car)
+    
+        <div>
+            <a href="{{action('CarsController@show', $car->id) }}">{{$car->title}}</a>
+        </div>
+       
+        <div>
+            <a href="{{action('CarsController@show', $car->id) }}">{{$car->producer}}</a>
+        </div>
+       
+        <div>
+            <a href="{{action('CarsController@show', $car->id) }}">{{$car->number_of_doors}}</a>
+        </div>
     
    @endforeach
 </body>

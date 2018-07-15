@@ -17,8 +17,11 @@ Route::get('/', function () {
     return view('welcome',compact('name','age'));
 });
 
-Route::get('/cars', 'CarsController@index');
+Route::get('/cars','CarsController@index');
+
+Route::get('/cars/{id}','CarsController@show');
 
 Route::get('/about', function () {
     return view('about');
 });
+ 
