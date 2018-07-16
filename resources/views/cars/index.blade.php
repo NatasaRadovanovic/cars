@@ -1,27 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cars</title>
-</head>
-<body>
+@extends('layouts.master')
+
+@section('content')
+   
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Producer</th>
+      <th scope="col">Numbers of doors</th>
+    </tr>
+  </thead>
+  <tbody>
+  @foreach($cars as $car)
+    <tr>
+      <td>
+         <a href="{{action('CarsController@show', $car->id) }}">{{$car->title}}</a>
+      </td>
+      <td>
+        <a href="{{action('CarsController@show', $car->id) }}">{{$car->producer}}</a>
+      </td>
+      <td>
+         <a href="{{action('CarsController@show', $car->id) }}">{{$car->number_of_doors}}</a>
+      </td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
+ @endsection
     
-    @foreach($cars as $car)
-    
-        <div>
-            <a href="{{action('CarsController@show', $car->id) }}">{{$car->title}}</a>
-        </div>
        
-        <div>
-            <a href="{{action('CarsController@show', $car->id) }}">{{$car->producer}}</a>
-        </div>
-       
-        <div>
-            <a href="{{action('CarsController@show', $car->id) }}">{{$car->number_of_doors}}</a>
-        </div>
     
-   @endforeach
-</body>
-</html>
+

@@ -1,18 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Car</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-</head>
-<body>
-    
-    <div>{{$car->title}}</div>
-    <div>{{$car->producer}}</div>
-    <div>{{$car->number_of_doors}}</div>
+ @extends('layouts.master')
+   
+@section('content')
 
-</body>
-</html>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Producer</th>
+                <th scope="col">Numbers of doors</th>
+            </tr>
+        </thead>
+         <tbody>
+            <tr>
+                <td> {{$car->title}}</td>
+                <td>{{$car->producer}}</td>
+                <td>{{$car->number_of_doors}}</td>
+             </tr>
+        </tbody>
+    </table>
+@endsection
+
